@@ -2,11 +2,10 @@
 
 from typing import List
 
-from singer_sdk import Tap, Stream
+from singer_sdk import Stream, Tap
 from singer_sdk import typing as th  # JSON schema typing helpers
 
 from tap_spotify import streams
-
 
 STREAM_TYPES = [
     streams.UserTopTracksShortTermStream,
@@ -18,6 +17,7 @@ STREAM_TYPES = [
     streams.GlobalTopTracksDailyStream,
     streams.GlobalTopTracksWeeklyStream,
     streams.GlobalViralTracksDailyStream,
+    streams.UserSavedTracksStream,
 ]
 
 
